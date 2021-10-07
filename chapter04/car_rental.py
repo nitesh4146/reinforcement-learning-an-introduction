@@ -108,7 +108,7 @@ def expected_return(state, action, state_value, constant_returned_cars):
                 num_of_cars_first_loc = min(num_of_cars_first_loc + returned_cars_first_loc, MAX_CARS)
                 num_of_cars_second_loc = min(num_of_cars_second_loc + returned_cars_second_loc, MAX_CARS)
                 returns += prob * (reward + DISCOUNT * state_value[num_of_cars_first_loc, num_of_cars_second_loc])
-            else:
+            else: 
                 for returned_cars_first_loc in range(POISSON_UPPER_BOUND):
                     for returned_cars_second_loc in range(POISSON_UPPER_BOUND):
                         prob_return = poisson_probability(
